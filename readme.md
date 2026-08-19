@@ -53,11 +53,6 @@ No backend. No database. Just a clean and powerful frontend music experience.
   * Easy playlist switching
   * Selected-song highlighting
 
-* 🔗 **Spotify Integration**
-
-  * Spotify playlist embeds
-  * Playlist-based Spotify integration
-
 * 📱 **Fully Responsive**
 
   * Desktop layout
@@ -88,8 +83,6 @@ No backend. No database. Just a clean and powerful frontend music experience.
 | **JavaScript**        | Application logic                    |
 | **CSS3**              | Custom styling & responsive design   |
 | **React Icons**       | UI icons                             |
-| **Media Session API** | Background playback & media controls |
-| **Spotify Embed**     | Spotify playlist integration         |
 
 ---
 
@@ -181,13 +174,6 @@ You can update:
 
 ---
 
-## 🌐 Live Demo
-
-Try the project online:
-
-**[🎧 GX Shubham MP3 Player](https://gx-shubham-music.netlify.app/)**
-
----
 
 ## 📦 Build for Production
 
@@ -265,13 +251,13 @@ Planned improvements may include:
 
 ## 👨‍💻 Author
 
-### GX Shubham
+### Shubham  Bisht
 
 **Web Developer & Designer**
 
 [![GitHub](https://img.shields.io/badge/GitHub-subhambxt03-181717?logo=github\&logoColor=white)](https://github.com/subhambxt03)
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-GX%20Shubham-FFAE24)](https://your-portfolio-url.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-GX%20Shubham-FFAE24)](https://shubhamm-dev.netlify.app/)
 
 ---
 
@@ -287,6 +273,6 @@ You are free to use, modify, and distribute this project according to the terms 
 
 ### ⭐ Star this repository if you enjoyed the project!
 
-**Made with ❤️ and 🎵 by GX Shubham**
+**Made with ❤️ and 🎵 by  Shubham**
 
 </div>
