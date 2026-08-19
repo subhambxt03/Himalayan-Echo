@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎵 GX Shubham MP3 Player
+# 🎵 Himalayan Echo
 
 **A premium, responsive music player where Pahad meets the beat. 🎧**
 
@@ -11,7 +11,6 @@
 
 [**🌐 Live Demo**](https://gx-shubham-music.netlify.app/) ·
 [**💻 GitHub**](https://github.com/subhambxt03/Mountain-Melody) ·
-[**🐛 Report Issue**](https://github.com/subhambxt03/Mountain-Melody/issues)
 
 </div>
 
@@ -19,11 +18,11 @@
 
 ## 📋 Overview
 
-**GX Shubham MP3 Player** is a modern, premium, and fully responsive music player built with **React.js**.
+**Himalayan Echo** is a modern, premium, and fully responsive music player built with **React.js**.
 
 The project focuses on providing a smooth music-listening experience with custom audio controls, playlist management, dynamic album artwork, Spotify integration, and responsive layouts for desktop and mobile devices.
 
-> 🎧 **Where Pahad Meets the Beat**
+> 🎧 **Garhwal • Kumaon • Music**
 
 No backend. No database. Just a clean and powerful frontend music experience.
 
