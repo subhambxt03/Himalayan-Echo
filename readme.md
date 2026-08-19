@@ -42,21 +42,6 @@ A **premium, responsive music player** built with React.js – featuring custom 
 
 ---
 
-## 📁 Structure
-src/
-├── components/ (Header, Sidebar, MusicPlayer, Playlist, SongRow, Footer)
-├── data/ (playlists.js – all songs & config)
-├── styles/ (all CSS files)
-├── App.jsx
-└── main.jsx
-public/
-├── images/ (album covers)
-├── audio/ (MP3 files)
-└── *.png (favicon, header, photo)
-
-text
-
----
 
 ## 🚀 Quick Start
 
@@ -76,10 +61,12 @@ Spotify playlist IDs
 
 Portfolio & GitHub URLs
 
+
 🌐 Deployment
 bash
 npm run build
 Deploy the dist/ folder to Netlify, Vercel, or GitHub Pages.
+
 
 📧 Contact
 GitHub · Portfolio
