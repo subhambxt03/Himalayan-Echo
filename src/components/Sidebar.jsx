@@ -26,13 +26,13 @@ const Sidebar = ({ playlists, selectedId, onSelect, show, onClose }) => {
             })}
           </div>
         </div>
-        {/* 👇 Desktop‑only image */}
+      
         <div className="sidebar-image-wrapper">
           <img src="/images/photo.png" alt="sidebar decoration" className="sidebar-image" />
         </div>
       </aside>
 
-      {/* Mobile overlay – unchanged, no image */}
+      
       {show && (
         <div className="sidebar-overlay" onClick={onClose}>
           <div className="sidebar-modal" onClick={(e) => e.stopPropagation()}>
