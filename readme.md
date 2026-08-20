@@ -9,8 +9,8 @@
 ![CSS](https://img.shields.io/badge/CSS-Custom-1572B6?logo=css3\&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-28A745)
 
-[**🌐 Live Demo**](https://gx-shubham-music.netlify.app/) ·
-[**💻 GitHub**](https://github.com/subhambxt03/Mountain-Melody) ·
+[**🌐 Live Demo**](https://himalayan-echo.netlify.app/) ·
+[**💻 GitHub**](https://github.com/subhambxt03/Himalayan-Echo.git) ·
 
 </div>
 

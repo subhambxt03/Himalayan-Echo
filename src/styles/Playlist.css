@@ -2,34 +2,31 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  margin-top: 14px;
-  max-height: 280px;          
-  overflow-y: auto;           
-  padding-right: 4px;         
+  margin-top: 10px;
+  overflow: hidden;
 }
 
 .playlist-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 0 12px 0;
-  flex-shrink: 0;          
+  padding: 4px 0 6px 0;
+  flex-shrink: 0;
 }
 .playlist-title {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.6px;
   color: #A7AAB5;
   text-transform: uppercase;
 }
-
 .spotify-toggle {
   background: rgba(255, 255, 255, 0.06);
   border: none;
   color: #A7AAB5;
-  padding: 4px 14px;
-  border-radius: 16px;
-  font-size: 0.75rem;
+  padding: 2px 12px;
+  border-radius: 14px;
+  font-size: 0.7rem;
   cursor: pointer;
   transition: background 0.2s;
 }
@@ -37,9 +34,8 @@
   background: rgba(255, 255, 255, 0.12);
   color: #F5F5F5;
 }
-
 .spotify-embed {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   flex-shrink: 0;
 }
 
@@ -47,6 +43,16 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
+  overflow-y: auto;
+  flex: 1;
+  padding-right: 2px;
+}
+.playlist-table::-webkit-scrollbar {
+  width: 3px;
+}
+.playlist-table::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
 }
 
 .playlist-table-header {
@@ -62,15 +68,36 @@
   flex-shrink: 0;
 }
 
-/* Mobile */
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
+  .playlist-container {
+    margin-top: 4px;
+    flex: 1;
+    min-height: 0;
+  }
+  .playlist-table {
+    gap: 1px;
+    max-height: none;
+  }
   .playlist-table-header {
     display: none;
   }
-  .playlist-title {
-    font-size: 0.7rem;
+  /* Song rows compact */
+  .song-row {
+    grid-template-columns: 28px 32px 1fr 36px 28px;
+    padding: 3px 4px 3px 2px;
   }
-  .playlist-container {
-    max-height: 220px;        /* smaller on mobile */
+  .song-cover img {
+    width: 24px;
+    height: 24px;
+  }
+  .song-title {
+    font-size: 0.75rem;
+  }
+  .song-artist {
+    font-size: 0.65rem;
+  }
+  .song-duration {
+    font-size: 0.65rem;
   }
 }

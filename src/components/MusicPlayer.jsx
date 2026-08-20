@@ -39,7 +39,12 @@ const MusicPlayer = ({
       <div className={`artwork-wrapper ${isPlaying ? 'playing' : ''}`}>
         <div className="player-artwork">
           <div className="artwork-glow" style={{ backgroundImage: `url(${currentSong.cover})` }} />
-          <img src={currentSong.cover} alt="album" className="artwork-image" />
+          <img
+            src={currentSong.cover}
+            alt="album"
+            className="artwork-image"
+            loading="lazy"   // 👈 LAZY LOAD
+          />
         </div>
       </div>
       <div className="player-info">

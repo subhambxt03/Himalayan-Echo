@@ -16,14 +16,14 @@ const Header = ({ portfolioUrl, githubUrl, showPlaylists, setShowPlaylists }) =>
 
       <div className="header-left">
         <FiMusic size={22} />
-        <span className="header-library">GX Shubham MP3 Player</span>
+        <span className="header-library">Himalayan Echo</span>
       </div>
 
       <div className="header-center">
         <FiActivity size={20} color="#FFAE24" />
         <span className="header-title">
           <span className="tagline-dash">—</span>
-          <span className="tagline-text">Where Pahad Meets the Beat</span>
+          <span className="tagline-text">Garhwal • Kumaon • Music</span>
           <span className="tagline-note"> ♪</span>
         </span>
       </div>

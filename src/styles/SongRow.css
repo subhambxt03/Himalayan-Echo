@@ -130,28 +130,74 @@
 
 @media (max-width: 768px) {
   .song-row {
-    grid-template-columns: 36px 40px 1fr 50px 36px;
-    padding: 4px 8px 4px 4px;
+    grid-template-columns: 34px 42px minmax(0, 1fr) 48px 34px;
+    height: 52px;
+    padding: 5px 8px 5px 4px;
   }
+
   .song-cover img {
-    width: 28px;
-    height: 28px;
+    width: 34px;
+    height: 34px;
+    border-radius: 5px;
   }
+
   .song-title {
+    font-size: 0.88rem;
+    line-height: 1.2;
+  }
+
+  .song-artist {
+    font-size: 0.72rem;
+    line-height: 1.2;
+  }
+
+  .song-duration {
+    font-size: 0.76rem;
+  }
+
+  .song-index {
     font-size: 0.85rem;
   }
+
+  .more-btn {
+    font-size: 1.15rem;
+    padding: 4px;
+  }
+
+  .song-info {
+    padding-left: 6px;
+    min-width: 0;
+  }
+
+  /* ONLY SONG LIST SCROLLS */
+  .playlist-songs {
+    height: 260px;
+    max-height: 260px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 480px) {
+  .song-row {
+    grid-template-columns: 30px 40px minmax(0, 1fr) 46px 32px;
+    height: 52px;
+  }
+
+  .song-cover img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .song-title {
+    font-size: 0.86rem;
+  }
+
   .song-artist {
     font-size: 0.7rem;
   }
+
   .song-duration {
-    font-size: 0.75rem;
-  }
-}
-@media (max-width: 480px) {
-  .song-row {
-    grid-template-columns: 30px 36px 1fr 44px 32px;
-  }
-  .song-title {
-    font-size: 0.8rem;
+    font-size: 0.74rem;
   }
 }

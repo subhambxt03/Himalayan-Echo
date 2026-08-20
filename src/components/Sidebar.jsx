@@ -28,7 +28,7 @@ const Sidebar = ({ playlists, selectedId, onSelect, show, onClose }) => {
         </div>
       
         <div className="sidebar-image-wrapper">
-          <img src="/images/photo.png" alt="sidebar decoration" className="sidebar-image" />
+          <img src="/images/photo.webp" alt="sidebar decoration" className="sidebar-image" />
         </div>
       </aside>
 

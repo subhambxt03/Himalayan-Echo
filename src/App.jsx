@@ -23,7 +23,6 @@ function App() {
   const selectedPlaylist = playlists.find(p => p.id === selectedPlaylistId) || playlists[0];
   const songs = selectedPlaylist.songs;
 
-  // ---- 1. Define handleNext and handlePrevious FIRST ----
   const handleNext = useCallback(() => {
     const idx = songs.findIndex(s => s.id === currentSong?.id);
     if (idx === -1) return;
@@ -48,11 +47,9 @@ function App() {
     setIsPlaying(true);
   }, [songs, currentSong]);
 
-  // ---- 2. Media Session API integration ----
+  // Media Session API integration
   useEffect(() => {
     if (!currentSong) return;
-
-    // Update metadata
     if ('mediaSession' in navigator) {
       navigator.mediaSession.metadata = new MediaMetadata({
         title: currentSong.title,
@@ -67,8 +64,6 @@ function App() {
           { src: currentSong.cover, sizes: '512x512', type: 'image/png' },
         ]
       });
-
-      // Set action handlers (play/pause/next/previous/seek)
       navigator.mediaSession.setActionHandler('play', () => {
         setIsPlaying(true);
         audioRef.current.play();
@@ -77,12 +72,8 @@ function App() {
         setIsPlaying(false);
         audioRef.current.pause();
       });
-      navigator.mediaSession.setActionHandler('previoustrack', () => {
-        handlePrevious();
-      });
-      navigator.mediaSession.setActionHandler('nexttrack', () => {
-        handleNext();
-      });
+      navigator.mediaSession.setActionHandler('previoustrack', () => handlePrevious());
+      navigator.mediaSession.setActionHandler('nexttrack', () => handleNext());
       navigator.mediaSession.setActionHandler('seekto', (details) => {
         if (details.fastSeek) {
           audioRef.current.fastSeek(details.seekTime);
@@ -92,11 +83,8 @@ function App() {
         setProgress(audioRef.current.currentTime);
       });
     }
-
-    // Cleanup: reset handlers when song changes
     return () => {
       if ('mediaSession' in navigator) {
-        // Remove action handlers (optional, but good practice)
         navigator.mediaSession.setActionHandler('play', null);
         navigator.mediaSession.setActionHandler('pause', null);
         navigator.mediaSession.setActionHandler('previoustrack', null);
@@ -106,7 +94,7 @@ function App() {
     };
   }, [currentSong, selectedPlaylist, handleNext, handlePrevious]);
 
-  // ---- 3. Volume and other effects ----
+  // Volume
   useEffect(() => {
     audioRef.current.volume = volume;
   }, [volume]);
@@ -116,11 +104,12 @@ function App() {
     if (!currentSong && songs.length) setCurrentSong(songs[0]);
   }, [songs, currentSong]);
 
-  // Load audio when currentSong changes
+  // Load audio when currentSong changes – with preload="metadata"
   useEffect(() => {
     if (currentSong) {
       const audio = audioRef.current;
       audio.src = currentSong.audio;
+      audio.preload = 'metadata';   // 👈 FAST PLAYBACK
       audio.load();
       if (isPlaying) audio.play().catch(() => {});
     }
@@ -156,7 +145,6 @@ function App() {
     };
   }, [repeat, handleNext]);
 
-  // ---- 4. Other handlers ----
   const handleSeek = (val) => {
     audioRef.current.currentTime = val;
     setProgress(val);
@@ -191,7 +179,6 @@ function App() {
 
   const handleVolumeChange = (val) => setVolume(val);
 
-  // ---- 5. Render ----
   return (
     <div className="app-container">
       <Header

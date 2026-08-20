@@ -13,7 +13,9 @@ const SongRow = ({ song, index, isActive, onSelect, onRemove }) => {
           <span className="equalizer"><span></span><span></span><span></span></span>
         ) : (index + 1)}
       </div>
-      <div className="song-cover"><img src={song.cover} alt="" /></div>
+      <div className="song-cover">
+        <img src={song.cover} alt="" loading="lazy" />
+      </div>
       <div className="song-info">
         <div className="song-title">{song.title}</div>
         <div className="song-artist">{song.artist}</div>
@@ -26,6 +28,7 @@ const SongRow = ({ song, index, isActive, onSelect, onRemove }) => {
         {menuOpen && (
           <div className="song-dropdown dropdown-menu">
             <button onClick={(e) => { e.stopPropagation(); onSelect(); setMenuOpen(false); }}>Play</button>
+            <button onClick={(e) => { e.stopPropagation(); onRemove(); setMenuOpen(false); }}>Remove</button>
           </div>
         )}
       </div>

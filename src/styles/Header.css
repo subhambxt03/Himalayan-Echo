@@ -49,24 +49,27 @@
   gap: 6px;
 }
 
-
 .tagline-text {
-  font-weight: 400;
-  font-style: italic;
-  color: #A7AAB5;
-  letter-spacing: 0.8px;
-  font-size: 0.95rem;
+  font-weight: 700;
+  font-style: normal;                      
+  background: linear-gradient(135deg, #FFAE24, #FF7F3F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
 .tagline-dash {
   color: #FFAE24;
   font-weight: 300;
-  opacity: 0.7;
+  opacity: 0.6;
 }
 .tagline-note {
-  color: #FF3F7F;
+  color: #FFAE24;
   font-size: 0.9rem;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 
@@ -170,13 +173,14 @@
     justify-content: center;
   }
   .tagline-text {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
   }
   .tagline-dash {
     display: none;
   }
   .tagline-note {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
   }
 
   .header-icon-img {
